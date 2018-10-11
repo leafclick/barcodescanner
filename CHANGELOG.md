@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.9.9-leafclick] - Oct 11, 2018
+* Update build for Android Studio 3.2 and gradle-4.6.
+* Change formula of optimal preview size to fix Huawei devices camera issue.
+
 ## [1.9.8] - August 18, 2017
 * One more attempt to fix Nexus 5x portrait scanning problems
 

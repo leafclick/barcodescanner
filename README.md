@@ -3,19 +3,17 @@ Introduction
 
 Android library projects that provides easy to use and extensible Barcode Scanner views based on ZXing and ZBar.
 
+Changes
+=========
+See the [Changelog](https://github.com/leafclick/barcodescanner/blob/master/CHANGELOG.md).
+
+
 Screenshots
 ===========
 <img src="https://raw.github.com/dm77/barcodescanner/master/screenshots/main_activity.png" width="266">
 <img src="https://raw.github.com/dm77/barcodescanner/master/screenshots/scanner.png" width="266">
 <img src="https://raw.github.com/dm77/barcodescanner/master/screenshots/scan_results.png" width="266">
 
-
-Minor BREAKING CHANGE in 1.8.4
-==============================
-Version 1.8.4 introduces a couple of new changes:
-
-* Open Camera and handle preview frames in a separate HandlerThread (#1, #99): Though this has worked fine in my testing on 3 devices, I would advise you to test on your own devices before blindly releasing apps with this version. If you run into any issues please file a bug report.
-* Do not automatically stopCamera after a result is found #115: This means that upon a successful scan only the cameraPreview is stopped but the camera is not released. So previously if your code was calling mScannerView.startCamera() in the handleResult() method, please replace that with a call to mScannerView.resumeCameraPreview(this);
 
 ZXing
 =====
@@ -25,7 +23,11 @@ Installation
 
 Add the following dependency to your build.gradle file.
 
-`compile 'me.dm7.barcodescanner:zxing:1.9.8'`
+`./gradlew build`
+
+To install new build into the local maven repository, run
+
+`./gradlew publishToMavenLocal`
 
 Simple Usage
 ------------
@@ -282,6 +284,7 @@ Contributors
 ============
 
 https://github.com/dm77/barcodescanner/graphs/contributors
+Kamil Toman <kamil.toman@leafclick.com>
 
 License
 =======
