@@ -13,5 +13,4 @@ android {
     defaultConfig {
         applicationId "${project.group}.zxing.sample"
     }
-    buildToolsVersion = '28.0.2'
 }

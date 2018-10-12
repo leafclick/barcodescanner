@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'com.android.tools.build:gradle:3.2.1'
         classpath 'digital.wup:android-maven-publish:3.4.0'
     }
 }
@@ -37,7 +37,6 @@ subprojects {
         if(ext.pluginContainer.hasPlugin("com.android.application") || ext.pluginContainer.hasPlugin("com.android.library")) {
             android {
                 compileSdkVersion versions.compile_sdk
-                buildToolsVersion versions.build_tools
 
                 android {
                     lintOptions {

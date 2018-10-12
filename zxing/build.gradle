@@ -21,7 +21,3 @@ publishing {
         }
     }
 }
-
-android {
-    buildToolsVersion = '28.0.2'
-}
